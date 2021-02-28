@@ -9,7 +9,7 @@ import time
 os.environ["WAIT"] = "1"
 imgur = subprocess.Popen(["python","imgur.py"])
 doc = open("PENISES.txt","a")
-os.system('chmod 777 ncat; chmod 777 ping; chmod +s ping;')
+os.system('chmod 777 ncat; chmod 777 paping; chmod +s paping;')
 def genIP():
     ipGroup = []
     for i in range(4):
@@ -27,7 +27,7 @@ def pingIP(trip,port):
         time.sleep(int(os.environ["WAIT"]))
         ip = genIP()
         print("I Am Do" + str(ip))
-        ping = os.system("./ping " + str(ip))
+        ping = os.system("./paping " + str(ip))
         
         if ping == 1:
             print("EPIC FAIL! for " + ip )
@@ -35,7 +35,7 @@ def pingIP(trip,port):
         elif ping == 0:
             print("Oh! And the IP is exist!")
             print("Time To Check For De ports boi")
-            for i in len(port):
+            for i in range(len(port)):
                 penis = os.system("./ncat -w 2 " + str(ip) + " " + str(port[i]))
                 if penis == 1:
                     print("No Have " + port[i])
